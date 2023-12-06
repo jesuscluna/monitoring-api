@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "41363abd-bb4f-4eee-8782-950efe40fe0a",
+		"name": "PREVALENTWARE MONITORINGAPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21030947"
+	},
+	"item": [
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "getAllCountries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcmV2YWxlbnR3YXJlIiwiaWF0IjoxNjkyOTEwNDcwLCJleHAiOjE3MjQ0NDY0NzAsImF1ZCI6Ind3dy5wcmV2YWxlbnR3YXJlLmNvbSIsInN1YiI6ImpvaG4uaGVybmFuZGV6QHRlc3QuY29tIiwiR2l2ZW5OYW1lIjoiSmhvbiIsIlN1cm5hbWUiOiJIZXJuYW5kZXoiLCJFbWFpbCI6ImpvaG4uaGVybmFuZGV6QHRlc3QuY29tIiwiUm9sZSI6ImNsbHBuMWRzZzAwMDAzODdlNnhxamRtdGQifQ.VWo5YWAyGa3klFDVQUo73xzFqkjR6DCEDskwZh3NpAY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{urlServer}}/countries?page=0&size=10",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getAllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/users?page=0&size=-5",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "-5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/users/sssssss",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"users",
+								"sssssss"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserMonitoring",
+			"item": [
+				{
+					"name": "getUserMonitoringByTimeRange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/user-monitoring/user?userEmail=email@test.com&startDate=2010-05-05&endDate=2023-11-29&page=2&size=5",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"user-monitoring",
+								"user"
+							],
+							"query": [
+								{
+									"key": "userEmail",
+									"value": "email@test.com"
+								},
+								{
+									"key": "startDate",
+									"value": "2010-05-05"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-11-29"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTop3UsersWithMostRecords",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/user-monitoring/top-users?startDate=2010-05-05&endDate=2023-11-29",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"user-monitoring",
+								"top-users"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2010-05-05"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-11-29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTopUsersByEventTypeAndCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/user-monitoring/top-users-by-event-type?eventType=description&startDate=2010-05-05&endDate=2023-11-29&page=0&size=10&countryId=countryId",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"user-monitoring",
+								"top-users-by-event-type"
+							],
+							"query": [
+								{
+									"key": "eventType",
+									"value": "description"
+								},
+								{
+									"key": "startDate",
+									"value": "2010-05-05"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-11-29"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "countryId",
+									"value": "countryId"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "tokenTest",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlServer",
+			"value": "localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
