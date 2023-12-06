@@ -15,10 +15,10 @@ API REST Solution for managing user behavior inside a digital platform.
 ## Before to start
 ```sh
   # Clone
-  git clone 
+  git clone https://github.com/jesuscluna/monitoring-api.git
 ```
 ```sh
-  cd monitoring-app
+  cd monitoring-api
 ```
 ## Steps
 1. Build the project with maven
@@ -34,7 +34,7 @@ API REST Solution for managing user behavior inside a digital platform.
   docker run -p <PUERTO_EXTERNO>:<PUERTO_INTERNO> -d <NOMBRE_IMAGEN>:<TAG> 
 ```
 4. The webservices are accessible via localhost:8080. You can see endpoints code in [Controller](src/main/java/com/prevalentware/monitoringapp/controller)
-5. Import [collection]() in Postman for an overview.
+5. Import [collection](PREVALENTWARE%20MONITORINGAPP.postman_collection.json) in Postman for an overview.
 
 # Decisions and Justifications
 ### 1. Spring Boot Version:
