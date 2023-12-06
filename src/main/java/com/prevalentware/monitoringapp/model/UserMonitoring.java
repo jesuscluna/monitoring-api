@@ -13,7 +13,7 @@ public class UserMonitoring {
     @Column
     private String description;
     @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "id")//TODO: Review relation
+    @JoinColumn(name = "userId", referencedColumnName = "id")
     private User user;
     @Column(name = "createdAt")
     private Timestamp createdAt;
